@@ -1,0 +1,57 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		// Default dotnet build task.
+		{
+			"type": "dotnet",
+			"task": "build",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [],
+			"label": "dotnet: build"
+		},
+		// Debugging task for the VS Code variables.
+		{
+			"label": "echo var",
+			"type": "shell",
+			"command": "echo ${config:game_dir}",
+			"problemMatcher": []
+		},
+		// This task copies the DLL to the BepInEx plugins folder.
+		// It expects the game_dir variable to be set in settings.json, and for BepInEx to be installed.
+		{
+			"label": "copy mod DLL",
+			"type": "shell",
+			"windows": {
+				"command": "copy",
+				"args": [
+					"${workspaceFolder}\\bin\\Debug\\net472\\${workspaceFolderBasename}.dll",
+					"${config:game_dir}\\BepInEx\\plugins\\${workspaceFolderBasename}.dll"
+				]
+			},
+			"linux": {
+				"command": "cp",
+				"args": [
+					"${workspaceFolder}/bin/Debug/net472/${workspaceFolderBasename}.dll",
+					"${config:game_dir}/BepInEx/plugins/${workspaceFolderBasename}.dll"
+				]
+			},
+			"problemMatcher": []
+		},
+		// Composite task for building and deploying the mod to the game directory.
+		{
+			"label": "build and deploy",
+			"dependsOrder": "sequence",
+			"dependsOn": [
+				"dotnet: build",
+				"copy mod DLL"
+			],
+			"group": {
+				"kind": "build"
+			},
+			"problemMatcher": []
+		}
+	]
+}
