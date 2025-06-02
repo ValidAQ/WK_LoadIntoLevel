@@ -3,15 +3,14 @@ using BepInEx.Logging;
 using BepInEx.Configuration;
 using UnityEngine.SceneManagement;
 
-namespace WK_LoadIntoLevel;
+namespace LoadIntoLevel;
 
 
-[BepInPlugin(pluginGuid, pluginName, pluginVersion)]
+[BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
 public class LoadIntoLevel : BaseUnityPlugin
 {
+    // BepInEx normally will use the AssemblyName from the project file as the plugin GUID.
     private const string pluginGuid = "com.validaq.loadintolevel";
-    private const string pluginName = "WK_LoadIntoLevel";
-    public const string pluginVersion = "0.1.0";
 
     private ConfigEntry<string> sceneToReplace;
     private ConfigEntry<string> sceneToLoad;

@@ -27,15 +27,15 @@
 			"windows": {
 				"command": "copy",
 				"args": [
-					"${workspaceFolder}\\bin\\Debug\\net472\\${workspaceFolderBasename}.dll",
-					"${config:game_dir}\\BepInEx\\plugins\\${workspaceFolderBasename}.dll"
+					"${workspaceFolder}\\bin\\Debug\\net472\\${config:mod_assembly}",
+					"${config:game_dir}\\BepInEx\\plugins\\${config:mod_assembly}"
 				]
 			},
 			"linux": {
 				"command": "cp",
 				"args": [
-					"${workspaceFolder}/bin/Debug/net472/${workspaceFolderBasename}.dll",
-					"${config:game_dir}/BepInEx/plugins/${workspaceFolderBasename}.dll"
+					"${workspaceFolder}/bin/Debug/net472/${config:mod_assembly}",
+					"${config:game_dir}/BepInEx/plugins/${config:mod_assembly}"
 				]
 			},
 			"problemMatcher": []

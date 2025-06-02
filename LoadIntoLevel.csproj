@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
-    <AssemblyName>LoadIntoLevel</AssemblyName>
+    <AssemblyName>com.validaq.loadintolevel</AssemblyName>
     <Product>LoadIntoLevel</Product>
     <Version>0.1.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -10,7 +10,7 @@
     <RestoreAdditionalProjectSources>
       https://api.nuget.org/v3/index.json;
     </RestoreAdditionalProjectSources>
-    <RootNamespace>WK_LoadIntoLevel</RootNamespace>
+    <RootNamespace>LoadIntoLevel</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

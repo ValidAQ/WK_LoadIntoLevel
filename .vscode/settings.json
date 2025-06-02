@@ -1,4 +1,7 @@
 {
 	// Game directory, e.g. "C:\Games\steamapps\common\White Knuckle"
     "game_dir": "D:\\SteamLibrary\\steamapps\\common\\White Knuckle",
+	// Name of the built mod assembly, e.g. "MyMod.dll".
+	// Depends on the AssemblyName property in the .csproj file.
+	"mod_assembly": "com.validaq.loadintolevel.dll"
 }
