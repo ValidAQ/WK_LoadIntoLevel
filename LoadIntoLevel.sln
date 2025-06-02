@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36109.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadIntoPlayground", "LoadIntoPlayground.csproj", "{B276869C-88B0-C33F-BDFB-DD7C1F63FE51}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadIntoLevel", "LoadIntoLevel.csproj", "{B276869C-88B0-C33F-BDFB-DD7C1F63FE51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

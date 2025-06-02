@@ -2,15 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>net472</TargetFramework>
-    <AssemblyName>LoadIntoPlayground</AssemblyName>
-    <Product>LoadIntoPlayground</Product>
-    <Version>0.0.1</Version>
+    <AssemblyName>LoadIntoLevel</AssemblyName>
+    <Product>LoadIntoLevel</Product>
+    <Version>0.1.0</Version>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <LangVersion>latest</LangVersion>
     <RestoreAdditionalProjectSources>
       https://api.nuget.org/v3/index.json;
     </RestoreAdditionalProjectSources>
-    <RootNamespace>WK_LoadIntoPlayground</RootNamespace>
+    <RootNamespace>WK_LoadIntoLevel</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
