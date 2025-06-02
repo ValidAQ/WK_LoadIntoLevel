@@ -45,6 +45,13 @@ public class LoadIntoLevel : BaseUnityPlugin
         Logger.LogInfo($"Plugin {pluginGuid} is loaded!");
     }
 
+    // NOTE: This is more of a Unity callback hack than a proper implementation.
+
+    // The in-game scene loading system does not work like this - in particular,
+    // the Game-Main scene is loaded with a specific M_Gamemode through CL_GameManager,
+    // which builds a list of levels to load within it.
+
+    // TODO: Write a proper scene loading system that allows to load scenes with specific levels/playlists.
     private void OnSceneLoad(Scene scene, LoadSceneMode mode)
     {
         bool targetSceneLoaded = scene.name == sceneToReplace.Value;
