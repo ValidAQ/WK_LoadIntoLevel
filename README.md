@@ -1,7 +1,3 @@
-<p align="center">
-  <img width="256" height="256" src="img/icon.png">
-</p>
-
 # White Knuckle - Load Into Level
 
 This mod allows you to load into the specified scene directly upon starting the game or instead of a specific gamemode - e.g. the tutorial.
@@ -21,9 +17,11 @@ List of available scenes:
 
 > [!NOTE]
 > The `Game-Main` scene has additional level-loading logic tied to it, depending on what game mode was selected.
+>
 > Currently this mod doesn't support making use of it - it will simply load the specified scene without any additional logic (WIP)
+>
 > Refer to `M_Gamemode` and `CL_GameManager` classes in game's code for more information on the scene-loading behavior.
 
 The config file can be found at `<Game Directory>\BepInEx\config\com.validaq.loadintolevel.cfg`
 
-Mod thumbnail based on an icon from the Remix Icon library.
+Mod icon based on an icon from the Remix Icon library.
