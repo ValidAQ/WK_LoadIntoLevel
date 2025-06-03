@@ -25,8 +25,11 @@ PROJECT_ROOT = Path.cwd()
 PROJECT_NAME = PROJECT_ROOT.name
 
 # Relative path from project root to the folder containing the DLL
-# Change if targeting a different .NET version or release variant
-DLL_SOURCE_FOLDER = Path("bin", "Debug", "net472")
+# Change if targeting a different .NET version
+RELEASE_DLL_FOLDER = PROJECT_ROOT / Path("bin", "Release", "net472")
+DEBUG_DLL_FOLDER = PROJECT_ROOT / Path("bin", "Debug", "net472")
+# Prefer release DLLs, but allow using debug DLLs if only they are available.
+DLL_SOURCE_FOLDER = RELEASE_DLL_FOLDER if RELEASE_DLL_FOLDER.exists() else DEBUG_DLL_FOLDER
 
 
 @dataclass
@@ -174,7 +177,7 @@ class CsprojGetter:
 
     def get_dll_path(self) -> Path:
         dll_name = self.get_dll_name()
-        return Path(PROJECT_ROOT) / DLL_SOURCE_FOLDER / dll_name
+        return DLL_SOURCE_FOLDER / dll_name
 
 
 class FilePackager:
