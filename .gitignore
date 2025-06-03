@@ -1,11 +1,16 @@
 # Visual Studio
 .vs/
+bin/
 obj/
+
+# Reference assembly files
+lib/
 
 # Visual Studio Code
 *.code-workspace
 
 # Packaging folder
 dist/*
-# Manifest file is automatically generated
+
+# Manifest file, automatically generated
 manifest.json
