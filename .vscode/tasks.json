@@ -22,7 +22,7 @@
 		// This task copies the DLL to the BepInEx plugins folder.
 		// It expects the game_dir variable to be set in settings.json, and for BepInEx to be installed.
 		{
-			"label": "copy mod DLL",
+			"label": "Copy DLL to Game Directory",
 			"type": "shell",
 			"windows": {
 				"command": "copy",
@@ -42,7 +42,7 @@
 		},
 		// Composite task for building and deploying the mod to the game directory.
 		{
-			"label": "build and deploy",
+			"label": "Build and Deploy Locally",
 			"dependsOrder": "sequence",
 			"dependsOn": [
 				"dotnet: build",
@@ -52,6 +52,30 @@
 				"kind": "build"
 			},
 			"problemMatcher": []
+		},
+		// Thunderstore package preparation task.
+		{
+			"label": "Package Thunderstore Mod",
+			"type": "shell",
+			// Assumes 'python' or 'python3' is in PATH.
+			// Use 'python3' if 'python' might point to Python 2 on some systems.
+			"command": "python",
+			"args": [
+				"${workspaceFolder}\\package.py"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"presentation": {
+				"reveal": "always",
+				"panel": "new",
+				"clear": true
+			}
 		}
 	]
 }

@@ -1,9 +1,11 @@
 # White Knuckle - Load Into Level
 
+## Summary
 This mod allows you to load into the specified scene directly upon starting the game or instead of a specific gamemode - e.g. the tutorial.
 
 By default, it drops you directly into the playground when you launch the game.
 
+## Configuration
 You can choose the scene to be replaced and the scene that will replace it in the mod config file.
 For example, to launch the playground instead of the tutorial, set `SceneToReplace` to `Training-Level` while leaving `SceneToLoad` set to `Playground`.
 

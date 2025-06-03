@@ -4,3 +4,8 @@ obj/
 
 # Visual Studio Code
 *.code-workspace
+
+# Packaging folder
+dist/*
+# Manifest file is automatically generated
+manifest.json
