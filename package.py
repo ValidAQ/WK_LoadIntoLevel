@@ -3,6 +3,9 @@ A packaging script for a Thunderstore mod that creates a distributable zip file.
 
 This script reads the mod's .csproj file, copies required files, and packages them into a zip archive.
 There's probably easier ways to do this, but none I know better than Python.
+
+Python 3.8+ is required to run this script.
+It can be run directly from the command line or through the "Package Thunderstore Mod" VS Code task.
 """
 
 from __future__ import annotations
